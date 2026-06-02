@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse & Cheese Bot</title>
+    <title>Mouse&CheeseBot</title>
+    
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/ffcc00/121214?text=🧀">
+
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -13,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             overflow: hidden;
         }
@@ -24,15 +27,20 @@
             background: #1a1a1e;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
             border: 1px solid #2a2a30;
-            max-width: 400px;
+            max-width: 420px;
+            width: 90%;
             transition: transform 0.3s ease;
         }
         .card:hover {
             transform: translateY(-5px);
         }
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 10px;
+        .bot-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffcc00;
+            margin-bottom: 15px;
             animation: float 3s ease-in-out infinite;
         }
         h1 {
@@ -45,8 +53,38 @@
             color: #a4a4a4;
             font-size: 1.1rem;
             line-height: 1.5;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
+        
+        /* Стили таймера */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: #222227;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #33333a;
+        }
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 50px;
+        }
+        .time-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        .time-label {
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
         .btn {
             display: inline-block;
             background-color: #ffcc00;
@@ -56,6 +94,8 @@
             text-decoration: none;
             font-weight: bold;
             transition: background 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
         }
         .btn:hover {
             background-color: #e6b800;
@@ -69,11 +109,59 @@
 <body>
 
     <div class="card">
-        <div class="logo">🧀</div>
-        <h1>Mouse & Cheese</h1>
+        <img class="bot-logo" src="https://placehold.co/150x150/1a1a1e/ffcc00?text=🧀" alt="Mouse & Cheese Logo">
+        
+        <h1>Mouse&Cheese</h1>
         <p>Официальный сайт проекта успешно запущен и готов к работе!</p>
-        <a href="#" class="btn">Релиз 10 июня!</a>
+        
+        <div class="countdown">
+            <div class="time-block">
+                <span class="time-number" id="days">00</span>
+                <span class="time-label">Дней</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">Час</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">Мин</span>
+            </div>
+            <div class="time-block">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">Сек</span>
+            </div>
+        </div>
+
+        <a href="#" class="btn">До релиза осталось</a>
     </div>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('June 10, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.querySelector('.countdown').style.display = 'none';
+                document.querySelector('.btn').innerHTML = 'Бот доступен!';
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 
 </body>
 </html>
