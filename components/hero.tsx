@@ -13,7 +13,7 @@ const floaters = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative flex min-h-[calc(100svh-5rem)] flex-col overflow-hidden">
       {/* Floating mascots */}
       <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
         {floaters.map((f, i) => (
@@ -32,7 +32,8 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-40 pt-20 lg:pt-28">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-40 pt-20 lg:pt-28">
+        <div className="max-w-xl">
         <div className="flex items-center gap-5">
           <MouseIcon size={80} className="h-16 w-16 sm:h-20 sm:w-20" />
           <h1 className="text-6xl font-bold tracking-tight text-foreground sm:text-7xl">
@@ -41,21 +42,22 @@ export function Hero() {
         </div>
 
         <div className="mt-10 space-y-1 text-2xl font-semibold text-muted-foreground sm:text-3xl">
-          <p>Multi-purpose Discord Bot.</p>
-          <p>Fully customizable.</p>
-          <p>Completely free.</p>
+          <p>Fun mini game bot</p>
+          <p>Collect cheese, dodge bombs</p>
+          <p>Play solo or with friends in multiplayer</p>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
-          <Button className="rounded-full bg-primary px-6 py-6 text-base font-bold text-primary-foreground hover:bg-primary/90">
+          <Button className="rounded-xl bg-primary px-6 py-6 text-base font-bold text-primary-foreground hover:bg-primary/90">
             Add to Discord
           </Button>
           <Button
             variant="secondary"
-            className="rounded-full bg-secondary px-6 py-6 text-base font-bold text-secondary-foreground hover:bg-secondary/80"
+            className="rounded-xl bg-secondary px-6 py-6 text-base font-bold text-secondary-foreground hover:bg-secondary/80"
           >
             Explore features
           </Button>
+        </div>
         </div>
       </div>
 

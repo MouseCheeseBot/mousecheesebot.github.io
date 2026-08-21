@@ -35,7 +35,7 @@ export function SiteNavbar() {
           ))}
         </ul>
 
-        <Button className="rounded-full bg-primary px-5 font-semibold text-primary-foreground hover:bg-primary/90">
+        <Button className="rounded-[10px] bg-primary px-5 font-semibold text-primary-foreground hover:bg-primary/90">
           Open dashboard
         </Button>
       </nav>
