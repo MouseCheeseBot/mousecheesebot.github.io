@@ -13,25 +13,98 @@
     <main class="page">
       <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
-          <a class="brand" href="#" aria-label="Mouse&Cheese home"><span class="brand-icon" data-mouse-size="28"></span><span>Mouse&amp;Cheese</span></a>
+          <a class="brand" href="" aria-label="Mouse&Cheese home"><span class="brand-icon" data-mouse-size="28"></span><span>Mouse&amp;Cheese</span></a>
           <ul class="nav-links">
-            <li><button class="nav-link is-active" type="button" disabled>Home</button></li>
-            <li><button class="nav-link" type="button" disabled>About</button></li>
-            <li><button class="nav-link" type="button" disabled>Status</button></li>
+            <li><a class="nav-link is-active" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="/about">About</a></li>
+            <li><span class="nav-link is-disabled" aria-disabled="true">Status</span></li>
+            <li><span class="nav-link is-disabled" aria-disabled="true">Premium</span></li>
           </ul>
           <a class="button button-primary dashboard-button" href="https://discord.com/oauth2/authorize?client_id=1392922499024687226&amp;permissions=141376&amp;integration_type=0&amp;scope=bot&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fmousecheesebot.github.io%2F">Add to Discord</a>
         </nav>
       </header>
+      <div class="home-content">
       <section class="hero" aria-labelledby="hero-title">
         <div class="floaters" aria-hidden="true"></div>
         <div class="hero-content"><div class="hero-copy">
           <div class="hero-title-row"><span class="hero-icon" data-mouse-size="80"></span><h1 id="hero-title">Mouse&amp;Cheese</h1></div>
           <div class="hero-description"><p>Fun mini game bot</p><p>Collect cheese, dodge bombs</p><p>Play solo or with friends in multiplayer</p></div>
-          <div class="hero-actions"><a class="button button-primary hero-button" href="https://discord.com/oauth2/authorize?client_id=1392922499024687226&amp;permissions=141376&amp;integration_type=0&amp;scope=bot&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fmousecheesebot.github.io%2F">Add to Discord</a><button class="button button-secondary hero-button" type="button" disabled>Top.gg</button></div>
+          <div class="hero-actions"><a class="button button-primary hero-button" href="https://discord.com/oauth2/authorize?client_id=1392922499024687226&amp;permissions=141376&amp;integration_type=0&amp;scope=bot&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fmousecheesebot.github.io%2F">Add to Discord</a><a class="button button-secondary hero-button" href="https://top.gg/bot/1392922499024687226" target="_blank" rel="noopener noreferrer">Top.gg</a></div>
         </div></div>
         <div class="bottom-wave" aria-hidden="true"><svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0,120 C240,40 480,40 720,110 C960,180 1200,180 1440,110 L1440,220 L0,220 Z" /></svg></div>
       </section>
+      <section class="feature-showcase" aria-label="Feature overview">
+        <article class="feature-row">
+          <div class="feature-visual feature-visual-music" aria-hidden="true">
+            <div class="mouse-collage mouse-collage-music">
+              <img class="mouse-sticker mouse-sticker-large" src="assets/mouse.svg" alt="" />
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h2>Discord Game</h2>
+            <p>Play solo in single player or with friends in multiplayer. Dodge bombs and other players shots and be the first to collect the cheese</p>
+          </div>
+        </article>
+
+        <article class="feature-row feature-row-reverse">
+          <div class="feature-copy">
+            <h2>Global Leaderboard</h2>
+            <p>Compete with top cheese and cup leaders to become the top one</p>
+          </div>
+          <div class="feature-visual feature-visual-levels" aria-hidden="true">
+            <div class="level-scene">
+              <img class="mouse-sticker mouse-sticker-small mouse-sticker-level mouse-sticker-level-left" src="assets/mouse.svg" alt="" />
+              <img class="mouse-sticker mouse-sticker-large mouse-sticker-level mouse-sticker-level-right" src="assets/mouse.svg" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row">
+          <div class="feature-visual feature-visual-multipurpose" aria-hidden="true">
+            <div class="multi-scene">
+              <img class="mouse-sticker mouse-sticker-large mouse-sticker-center" src="assets/mouse.svg" alt="" />
+              <img class="mouse-sticker mouse-sticker-small mouse-sticker-side mouse-sticker-left" src="assets/mouse.svg" alt="" />
+              <img class="mouse-sticker mouse-sticker-small mouse-sticker-side mouse-sticker-right" src="assets/mouse.svg" alt="" />
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h2>Server Activity</h2>
+            <p>Keep your server active with mini-games &amp; battles to increase member activity and user engagement.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="after-wave" aria-label="More content below the wave">
+        <svg class="bottom-end-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,120 C240,40 480,40 720,110 C960,180 1200,180 1440,110 L1440,220 L0,220 Z" fill="oklch(0.22 0.012 270)"></path>
+        </svg>
+      </section>
+      </div>
+      <section class="about-content" aria-labelledby="about-title" hidden>
+        <div class="about-inner">
+          <p class="about-eyebrow">ABOUT MOUSE&amp;CHEESE</p>
+          <h1 id="about-title">A game bot for your Discord server</h1>
+          <p class="about-lead">Mouse&amp;Cheese brings quick mini-games, competition and server activity together in one place.</p>
+          <section class="faq-section" aria-labelledby="faq-title">
+            <h2 id="faq-title">Frequently asked questions</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>What is Mouse&amp;Cheese?</summary>
+                <p>Mouse&amp;Cheese is a Discord game bot with mini-games, battles and friendly competition.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Can I play with my friends?</summary>
+                <p>Yes. Invite Mouse&amp;Cheese to your server and play together with your community.</p>
+              </details>
+              <details class="faq-item">
+                <summary>How do I add the bot?</summary>
+                <p>Use the Add to Discord button at the top of the page to invite the bot to your server.</p>
+              </details>
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
-    <script src="index.js"></script>
+    <script src="index.js?v=20260907"></script>
   </body>
 </html>
