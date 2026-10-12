@@ -213,6 +213,7 @@ const applyLanguage = (language) => {
   themeToggle?.setAttribute("aria-label", document.documentElement.classList.contains("theme-light") ? dictionary.switchToDark : dictionary.switchToLight);
 };
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const discordInviteUrl = "https://discord.com/oauth2/authorize?client_id=1392922499024687226&permissions=141376&integration_type=0&scope=bot&response_type=code&redirect_uri=https%3A%2F%2Fmousecheesebot.github.io%2F";
 const applyTheme = (isLight) => {
   document.documentElement.classList.remove("theme-light", "dark");
   document.documentElement.classList.add(isLight ? "theme-light" : "dark");
@@ -226,6 +227,21 @@ applyLanguage(currentLanguage);
 const savedTheme = localStorage.getItem("mousecheese-theme");
 const prefersLightTheme = savedTheme ? savedTheme === "light" : window.matchMedia("(prefers-color-scheme: light)").matches;
 applyTheme(prefersLightTheme);
+document.querySelectorAll("[data-invite-button]").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (document.documentElement.classList.contains("invite-redirecting")) {
+      return;
+    }
+    if (window.location.protocol !== "file:") {
+      window.history.replaceState({}, "", new URL(button.href).pathname);
+    }
+    document.documentElement.classList.add("invite-redirecting");
+    window.setTimeout(() => {
+      window.location.replace(discordInviteUrl);
+    }, 1000);
+  });
+});
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const isLight = !document.documentElement.classList.contains("theme-light");
