@@ -3,8 +3,6 @@ if (window.location.search) {
   window.history.replaceState({}, document.title, `${window.location.pathname}${window.location.hash}`);
 }
 function mouseIcon(size) { return `<img src="assets/mouse.svg" width="${size}" height="${size}" alt="" aria-hidden="true">`; }
-const getSunIcon = () => '<img class="utility-button-icon" src="assets/sun.svg" alt="" aria-hidden="true">';
-const getMoonIcon = () => '<img class="utility-button-icon" src="assets/moon.svg" alt="" aria-hidden="true">';
 const translations = {
   en: {
     title: "Mouse&Cheese - Discord Game Bot",
@@ -24,6 +22,7 @@ const translations = {
     heroLine2: "Collect cheese, dodge bombs",
     heroLine3: "Play solo or with friends in multiplayer",
     featureOverview: "Feature overview",
+    footerDescription: "A fun mini-game bot for Discord. Collect cheese, dodge bombs, and play solo or with friends.",
     discordGame: "Discord Game",
     discordGameDescription: "Play solo in single player or with friends in multiplayer. Dodge bombs and other players shots and be the first to collect the cheese",
     leaderboard: "Global Leaderboard",
@@ -40,7 +39,11 @@ const translations = {
     faqQuestion2: "Can I play with my friends?",
     faqAnswer2: "Yes. Invite Mouse&Cheese to your server and play together with your community.",
     faqQuestion3: "How do I add the bot?",
-    faqAnswer3: "Use the Add to Discord button at the top of the page to invite the bot to your server."
+    faqAnswer3: "Use the Add to Discord button at the top of the page to invite the bot to your server.",
+    faqQuestion4: "Is this bot safe?",
+    faqAnswer4: "Mouse&Cheese is designed to be safe. When adding it, review the permissions Discord requests and grant only the permissions you’re comfortable with.",
+    faqQuestion5: "Can I add the bot to my Discord apps?",
+    faqAnswer5: "Yes. Open the bot’s profile and click the “Add App” button."
   },
   ru: {
     title: "Mouse&Cheese — игровой бот для Discord",
@@ -60,6 +63,7 @@ const translations = {
     heroLine2: "Собирайте сыр, уворачивайтесь от бомб",
     heroLine3: "Играйте в одиночку или с друзьями",
     featureOverview: "Возможности",
+    footerDescription: "Весёлый игровой бот для Discord. Собирайте сыр, уворачивайтесь от бомб и играйте в одиночку или с друзьями.",
     discordGame: "Игра в Discord",
     discordGameDescription: "Играйте в одиночку или с друзьями. Уворачивайтесь от бомб и выстрелов других игроков и соберите сыр первым.",
     leaderboard: "Общий рейтинг",
@@ -76,7 +80,11 @@ const translations = {
     faqQuestion2: "Можно играть с друзьями?",
     faqAnswer2: "Да. Пригласите Mouse&Cheese на сервер и играйте вместе с сообществом.",
     faqQuestion3: "Как добавить бота?",
-    faqAnswer3: "Нажмите кнопку «Добавить в Discord» вверху страницы, чтобы пригласить бота на сервер."
+    faqAnswer3: "Нажмите кнопку «Добавить в Discord» вверху страницы, чтобы пригласить бота на сервер.",
+    faqQuestion4: "Безопасен ли этот бот?",
+    faqAnswer4: "Mouse&Cheese создан с учётом безопасности. При добавлении проверьте запрашиваемые Discord разрешения и предоставляйте только те, которые считаете приемлемыми.",
+    faqQuestion5: "Можно ли добавить бота в свои приложения Discord?",
+    faqAnswer5: "Да. Откройте профиль бота и нажмите кнопку «Добавить приложение»."
   },
   uk: {
     title: "Mouse&Cheese — ігровий бот для Discord",
@@ -96,6 +104,7 @@ const translations = {
     heroLine2: "Збирайте сир, ухиляйтеся від бомб",
     heroLine3: "Грайте самі або з друзями",
     featureOverview: "Можливості",
+    footerDescription: "Веселий ігровий бот для Discord. Збирайте сир, ухиляйтеся від бомб і грайте самі або з друзями.",
     discordGame: "Гра в Discord",
     discordGameDescription: "Грайте самі або з друзями. Ухиляйтеся від бомб і пострілів інших гравців та зберіть сир першими.",
     leaderboard: "Загальний рейтинг",
@@ -112,7 +121,11 @@ const translations = {
     faqQuestion2: "Чи можна грати з друзями?",
     faqAnswer2: "Так. Запросіть Mouse&Cheese на свій сервер і грайте разом зі спільнотою.",
     faqQuestion3: "Як додати бота?",
-    faqAnswer3: "Натисніть кнопку «Додати до Discord» угорі сторінки, щоб запросити бота на сервер."
+    faqAnswer3: "Натисніть кнопку «Додати до Discord» угорі сторінки, щоб запросити бота на сервер.",
+    faqQuestion4: "Чи безпечний цей бот?",
+    faqAnswer4: "Mouse&Cheese створено з урахуванням безпеки. Під час додавання перевірте дозволи, які запитує Discord, і надавайте лише ті, які вважаєте прийнятними.",
+    faqQuestion5: "Чи можна додати бота до своїх застосунків Discord?",
+    faqAnswer5: "Так. Відкрийте профіль бота та натисніть кнопку «Додати застосунок»."
   },
   be: {
     title: "Mouse&Cheese — гульнявы бот для Discord",
@@ -132,6 +145,7 @@ const translations = {
     heroLine2: "Збірайце сыр, ухіляйцеся ад бомбаў",
     heroLine3: "Гуляйце самі або з сябрамі",
     featureOverview: "Магчымасці",
+    footerDescription: "Вясёлы гульнявы бот для Discord. Збірайце сыр, ухіляйцеся ад бомбаў і гуляйце самі або з сябрамі.",
     discordGame: "Гульня ў Discord",
     discordGameDescription: "Гуляйце самі або з сябрамі. Ухіляйцеся ад бомбаў і стрэлаў іншых гульцоў ды збярыце сыр першымі.",
     leaderboard: "Агульны рэйтынг",
@@ -148,7 +162,11 @@ const translations = {
     faqQuestion2: "Ці можна гуляць з сябрамі?",
     faqAnswer2: "Так. Запрасіце Mouse&Cheese на свой сервер і гуляйце разам са сваёй супольнасцю.",
     faqQuestion3: "Як дадаць бота?",
-    faqAnswer3: "Націсніце кнопку «Дадаць у Discord» уверсе старонкі, каб запрасіць бота на сервер."
+    faqAnswer3: "Націсніце кнопку «Дадаць у Discord» уверсе старонкі, каб запрасіць бота на сервер.",
+    faqQuestion4: "Ці бяспечны гэты бот?",
+    faqAnswer4: "Mouse&Cheese створаны з улікам бяспекі. Падчас дадання праверце дазволы, якія запытвае Discord, і давайце толькі тыя, якія лічыце прымальнымі.",
+    faqQuestion5: "Ці можна дадаць бота ў свае праграмы Discord?",
+    faqAnswer5: "Так. Адкрыйце профіль бота і націсніце кнопку «Дадаць праграму»."
   },
   pl: {
     title: "Mouse&Cheese — bot do gier na Discordzie",
@@ -168,6 +186,7 @@ const translations = {
     heroLine2: "Zbieraj ser, unikaj bomb",
     heroLine3: "Graj solo lub ze znajomymi",
     featureOverview: "Funkcje",
+    footerDescription: "Zabawny bot z minigrami na Discorda. Zbieraj ser, unikaj bomb i graj solo lub ze znajomymi.",
     discordGame: "Gra na Discordzie",
     discordGameDescription: "Graj solo lub ze znajomymi. Unikaj bomb i strzałów innych graczy, aby jako pierwszy zebrać ser.",
     leaderboard: "Globalny ranking",
@@ -184,7 +203,11 @@ const translations = {
     faqQuestion2: "Czy mogę grać ze znajomymi?",
     faqAnswer2: "Tak. Zaproś Mouse&Cheese na swój serwer i graj razem ze swoją społecznością.",
     faqQuestion3: "Jak dodać bota?",
-    faqAnswer3: "Użyj przycisku „Dodaj do Discorda” u góry strony, aby zaprosić bota na serwer."
+    faqAnswer3: "Użyj przycisku „Dodaj do Discorda” u góry strony, aby zaprosić bota na serwer.",
+    faqQuestion4: "Czy ten bot jest bezpieczny?",
+    faqAnswer4: "Mouse&Cheese został zaprojektowany z myślą o bezpieczeństwie. Przed dodaniem sprawdź uprawnienia wymagane przez Discorda i przyznaj tylko te, na które się zgadzasz.",
+    faqQuestion5: "Czy mogę dodać bota do swoich aplikacji Discord?",
+    faqAnswer5: "Tak. Otwórz profil bota i kliknij przycisk „Dodaj aplikację”."
   }
 };
 const languageToggle = document.querySelector("[data-language-toggle]");
@@ -213,14 +236,15 @@ const applyLanguage = (language) => {
   themeToggle?.setAttribute("aria-label", document.documentElement.classList.contains("theme-light") ? dictionary.switchToDark : dictionary.switchToLight);
 };
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const themeToggleIcon = themeToggle?.querySelector(".utility-button-icon");
 const discordInviteUrl = "https://discord.com/oauth2/authorize?client_id=1392922499024687226&permissions=141376&integration_type=0&scope=bot&response_type=code&redirect_uri=https%3A%2F%2Fmousecheesebot.github.io%2F";
 const applyTheme = (isLight) => {
   document.documentElement.classList.remove("theme-light", "dark");
   document.documentElement.classList.add(isLight ? "theme-light" : "dark");
   themeToggle?.setAttribute("aria-label", isLight ? translations[currentLanguage].switchToDark : translations[currentLanguage].switchToLight);
   themeToggle?.setAttribute("aria-pressed", String(isLight));
-  if (themeToggle) {
-    themeToggle.innerHTML = isLight ? getMoonIcon() : getSunIcon();
+  if (themeToggleIcon) {
+    themeToggleIcon.src = isLight ? "assets/moon.svg" : "assets/sun.svg";
   }
 };
 applyLanguage(currentLanguage);
@@ -240,6 +264,12 @@ document.querySelectorAll("[data-invite-button]").forEach((button) => {
     window.setTimeout(() => {
       window.location.replace(discordInviteUrl);
     }, 1000);
+  });
+});
+document.querySelectorAll("[data-social-redirect]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.replace(link.href);
   });
 });
 if (themeToggle) {
